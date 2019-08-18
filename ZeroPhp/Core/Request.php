@@ -11,7 +11,7 @@ class Request{
             self::$path = self::$url->getPath();
             self::$get = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
             self::$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-            if($_SERVER['HTTPS'] == "on"){
+            if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on"){
                 self::$isSecure = true;
             }
             self::$isInitialized = true;
