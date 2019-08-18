@@ -1,6 +1,6 @@
 <?php
 namespace ZeroPhp\Core;
-class Request{
+class HttpRequest{
     private static $isInitialized = false;
     private static $url, $method, $path, $get, $post, $isSecure = false;
 

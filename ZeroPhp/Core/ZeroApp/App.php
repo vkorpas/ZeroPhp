@@ -1,13 +1,13 @@
 <?php
 namespace ZeroPhp\Core\ZeroApp;
-use \ZeroPhp\Core\Request;
+use \ZeroPhp\Core\HttpRequest;
 class App{
 
     private static $isInitialized = false, $isDeinitialized = false;
 
     public static function Initialize(){
         if(!self::$isInitialized){
-            Request::Initialize();
+            HttpRequest::Initialize();
             print_r($_SERVER);
         }
     }
