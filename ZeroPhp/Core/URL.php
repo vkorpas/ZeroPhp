@@ -76,7 +76,6 @@ class URL{
 
     public function setUrl($url){
         $url_parsed  = parse_url($url);
-        print_r($url_parsed);
         foreach ($url_parsed as $key => $value){
             if($value !=null){
                 $this->$key = $value;

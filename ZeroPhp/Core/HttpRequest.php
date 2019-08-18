@@ -15,7 +15,56 @@ class HttpRequest{
                 self::$isSecure = true;
             }
             self::$isInitialized = true;
+
         }
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getGet()
+    {
+        return self::$get;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getMethod()
+    {
+        return self::$method;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getPath()
+    {
+        return self::$path;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getPost()
+    {
+        return self::$post;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getUrl()
+    {
+        return self::$url;
+    }
+
+    /**
+     * @return bool
+     */
+    public static function isSecure()
+    {
+        return self::$isSecure;
     }
 
 
